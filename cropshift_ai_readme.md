@@ -37,9 +37,9 @@ The end-to-end pipeline integrates deep learning spatial-temporal modeling with 
 1. **GeoTIFF Ingestion & Preprocessing (`data_pipeline.py`):**
    * Ingests real NASA `HLSS30` GeoTIFF bands (`B04` Red, `B8A`/`B08` NIR, `B11` SWIR1) or generates realistic synthetic regional patches for rapid prototyping.
    * Applies scale factors, masks clouds/nodata values, and computes normalized indices:
-     
+   
      $$
-     \displaystyle \text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}, \qquad \text{NDMI} = \frac{\text{NIR} - \text{SWIR1}}{\text{NIR} + \text{SWIR1}}$$
+     \displaystyle \text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}, \qquad \text{NDMI} = \frac{\text{NIR} - \text{SWIR1}}{\text{NIR} + \text{SWIR1}}
      $$
 
 2. **Spatial Crop Segmentation (`CropSegFormer`):**
