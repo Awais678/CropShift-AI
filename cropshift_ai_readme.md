@@ -50,19 +50,6 @@ The end-to-end pipeline integrates deep learning spatial-temporal modeling with 
 4. **Multi-Objective Rotation Scoring (`XGBoost` + Agronomic Rules):**
    * Evaluates candidate rotations (*Continuous Cotton*, *Cotton* $\rightarrow$ *Wheat*, *Cotton* $\rightarrow$ *Mung Bean*, *Cotton* $\rightarrow$ *Sorghum*) using farmer-adjustable priority weights for **Water Efficiency**, **Soil Health**, **Thermal Resilience**, and **Net Profit (PKR/acre)**.
 
-## 📂 Project Structure
-
-```
-cropshift_ai/
-├── app.py                  # Interactive Streamlit decision-support dashboard
-├── data_pipeline.py        # NASA HLS GeoTIFF loader, NDVI/NDMI calculator & POWER client
-├── models.py               # PyTorch CropSegFormer, ConvLSTM & XGBoost rotation scorer
-├── scenarios.py            # Sindh agronomic crop database & explainable trade-off engine
-├── requirements.txt        # Python dependencies
-└── data/
-    └── hls/                # Directory for local NASA HLSS30 GeoTIFF files
-```
-
 ## 🚀 Running in Google Colab with Ngrok
 
 To launch the **CropShift AI** interactive Streamlit dashboard directly in your browser via Google Colab, execute the following steps:
