@@ -39,8 +39,9 @@ The end-to-end pipeline integrates deep learning spatial-temporal modeling with 
    * Applies scale factors, masks clouds/nodata values, and computes normalized indices:
    
      $$
-     \displaystyle \text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}, \qquad \text{NDMI} = \frac{\text{NIR} - \text{SWIR1}}{\text{NIR} + \text{SWIR1}}
-     $$
+\displaystyle
+\text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}, \qquad \text{NDMI} = \frac{\text{NIR} - \text{SWIR1}}{\text{NIR} + \text{SWIR1}}
+$$
 
 2. **Spatial Crop Segmentation (`CropSegFormer`):**
    * Transformer-based semantic segmentation backbone classifying $30\text{ m}$ pixels into active agricultural classes (Cotton, Wheat, Legumes/Fodder, Bare Soil/Fallow).
